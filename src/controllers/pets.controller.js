@@ -1,14 +1,14 @@
-import { Pet } from "../modules/pet";
-import { petlist } from "../modules/pet_list";
+import { Pet } from "../modules/pet.js";
+import { petlist } from "../modules/pet_list.js";
 
 const listInstancia = new petlist();
 const petInstancia = new Pet();
 
-export const getPets = (res) =>{
+export const getPets = (req, res) =>{
     const pets = listInstancia.getAllPets();
 
     if(!pets.length){
-        res.status(404).json({message:"Não existem pets cadastrados.", origem:"controller" })
+        res.status(404).json({message:"Não existem pets cadastrados.", cadastros: `${listInstancia.length}` })
     } else{
         res.status(200).json({message:"OK!", status:"OK", data:pets })
     }

@@ -1,9 +1,11 @@
 import { Router } from "express";
-import { getPets } from "../controllers/pets.controller";
-import { getPetId } from "../controllers/pets.controller";
-import { createAPet } from "../controllers/pets.controller";
-import { updateAPet } from "../controllers/pets.controller";
-import { deletePet } from "../controllers/pets.controller";
+import {
+    getPets,
+    getPetId,
+    createAPet,
+    updateAPet,
+    deletePet
+} from "../controllers/pets.controller.js";
 
 const petRoutes = Router();
 

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import petRoutes from "./pets.routes";
+import petRoutes from "./pets.routes.js";
 
 const routes = Router();
 
