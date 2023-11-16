@@ -6,7 +6,7 @@ export class petlist {
         return this.pets;
     }
     getPetById(id) {
-        return this.pet.find((pet) => pet.id === id);
+        return this.pets.find((pet) => pet.id === id);
     }
     createPet(pet) {
         this.pets.push(pet);
@@ -17,19 +17,16 @@ export class petlist {
         if(!pet) {
             return null;
         }
-
-        this.id = uuidv4();
-        this.nome = nome;
-        this.tipo = tipo;
-        this.idade = idade;
-        this.cor = cor;
-        this.imagem = imagem;
-        this.vacinado = vacinado;
+        pet.nome = nome;
+        pet.tipo = tipo;
+        pet.idade = idade;
+        pet.cor = cor;
+        pet.imagem = imagem;
+        pet.vacinado = vacinado;
 
         return pet;
     }
     excludePet(petId) {
-     this.pet = this.pet.filter((pet) => pet.id !== petId);
-        
+     this.pets = this.pets.filter((pet) => pet.id !== petId);
     }
 }
