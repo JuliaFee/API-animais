@@ -9,7 +9,7 @@ export class petlist {
         return this.pet.find((pet) => pet.id === id);
     }
     createPet(pet) {
-        this.pet.push(pet);
+        this.pets.push(pet);
     }
     updatePet(id, nome, tipo, idade, cor, imagem, vacinado){
         const pet = this.getPetById(id);
